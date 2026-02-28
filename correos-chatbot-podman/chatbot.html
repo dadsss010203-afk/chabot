@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Widget de Asistente Virtual — Correos de Bolivia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rojo: #C8102E; /* Rojo institucional */
+            --azul: #003366; /* Azul institucional */
+            --gris-fondo: #F4F6F8;
+            --gris-texto: #4A4A4A;
+            --gris-bordes: #DDE2E8;
+            --blanco: #FFFFFF;
+            --verde-estado: #27AE60;
+            --rojo-error: #E74C3C;
+            --sombra: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: #f0f0f0; /* Fondo de ejemplo para la página principal */
+            height: 100vh;
+            position: relative;
+        }
+
+        /* ── BOTÓN FLOTANTE (BURBUJA) ── */
+        #chat-bubble {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: var(--rojo);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--blanco);
+            font-size: 28px;
+            cursor: pointer;
+            box-shadow: var(--sombra);
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        #chat-bubble:hover {
+            transform: scale(1.1);
+            background: #B00D23;
+        }
+
+        /* ── VENTANA DEL CHAT ── */
+        #chat-window {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 360px;
+            height: 500px;
+            background: var(--blanco);
+            border-radius: 16px;
+            box-shadow: var(--sombra);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 999;
+            transition: all 0.3s;
+        }
+
+        #chat-window.open {
+            display: flex;
+        }
+
+        /* ── HEADER ── */
+        header {
+            background: var(--blanco);
+            border-bottom: 1px solid var(--gris-bordes);
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            background: url('https://via.placeholder.com/40?text=CB') center/cover; /* Logo oficial */
+            border-radius: 50%;
+        }
+
+        .header-title h1 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--azul);
+        }
+
+        .header-title span {
+            font-size: 0.8rem;
+            color: var(--gris-texto);
+            font-weight: 300;
+        }
+
+        #status-dot {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.75rem;
+            color: var(--gris-texto);
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #AEB6BF;
+            transition: background 0.3s;
+        }
+
+        .dot.activo { background: var(--verde-estado); }
+        .dot.error { background: var(--rojo-error); }
+
+        /* Botón de borrar conversación */
+        #clear-chat {
+            background: none;
+            border: none;
+            color: var(--gris-texto);
+            font-size: 18px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        #clear-chat:hover {
+            color: var(--rojo-error);
+        }
+
+        /* ── CHAT AREA ── */
+        #chat {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            background: var(--gris-fondo);
+            scroll-behavior: smooth;
+        }
+
+        #chat::-webkit-scrollbar { width: 5px; }
+        #chat::-webkit-scrollbar-track { background: var(--gris-fondo); }
+        #chat::-webkit-scrollbar-thumb { background: var(--gris-bordes); border-radius: 2.5px; }
+
+        /* Mensaje de bienvenida */
+        .bienvenida {
+            text-align: center;
+            padding: 20px;
+            background: var(--blanco);
+            border-radius: 12px;
+            box-shadow: var(--sombra);
+        }
+
+        .bienvenida .icono {
+            font-size: 2.5rem;
+            color: var(--rojo);
+            margin-bottom: 10px;
+        }
+
+        .bienvenida h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--azul);
+            margin-bottom: 8px;
+        }
+
+        .bienvenida p {
+            font-size: 0.9rem;
+            color: var(--gris-texto);
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .sugerencias {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .sugerencia {
+            background: var(--blanco);
+            border: 1px solid var(--gris-bordes);
+            color: var(--gris-texto);
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .sugerencia:hover {
+            background: var(--rojo);
+            color: var(--blanco);
+            border-color: var(--rojo);
+        }
+
+        /* Burbujas de mensaje */
+        .message {
+            display: flex;
+            gap: 10px;
+            max-width: 100%;
+            animation: slideUp 0.5s ease;
+        }
+
+        .message.user {
+            align-self: flex-end;
+            flex-direction: row-reverse;
+        }
+
+        .message.bot {
+            align-self: flex-start;
+        }
+
+        .avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            flex-shrink: 0;
+            color: var(--blanco);
+        }
+
+        .message.user .avatar {
+            background: var(--rojo);
+        }
+
+        .message.bot .avatar {
+            background: var(--azul);
+        }
+
+        .bubble {
+            padding: 10px 15px;
+            border-radius: 16px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            word-wrap: break-word;
+            box-shadow: var(--sombra);
+            position: relative;
+        }
+
+        .message.user .bubble {
+            background: var(--rojo);
+            color: var(--blanco);
+            border-bottom-right-radius: 4px;
+        }
+
+        .message.user .bubble::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: -8px;
+            width: 0;
+            height: 0;
+            border: 8px solid transparent;
+            border-top-color: var(--rojo);
+            border-right: 0;
+            transform: rotate(45deg);
+        }
+
+        .message.bot .bubble {
+            background: var(--blanco);
+            color: var(--gris-texto);
+            border: 1px solid var(--gris-bordes);
+            border-bottom-left-radius: 4px;
+        }
+
+        .message.bot .bubble::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -8px;
+            width: 0;
+            height: 0;
+            border: 8px solid transparent;
+            border-top-color: var(--blanco);
+            border-left: 0;
+            transform: rotate(-45deg);
+        }
+
+        /* Typing indicator */
+        .typing .bubble {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 10px 15px;
+            background: var(--blanco);
+            border: 1px solid var(--gris-bordes);
+            border-radius: 16px;
+            box-shadow: var(--sombra);
+        }
+
+        .typing-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--gris-texto);
+            border-radius: 50%;
+            animation: bounce 1.4s infinite;
+        }
+
+        .typing-dot:nth-child(2) { animation-delay: 0.3s; }
+        .typing-dot:nth-child(3) { animation-delay: 0.6s; }
+
+        /* ── FORM ── */
+        #form-area {
+            background: var(--blanco);
+            border-top: 1px solid var(--gris-bordes);
+            padding: 12px 20px;
+            flex-shrink: 0;
+        }
+
+        #form {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        #input {
+            flex: 1;
+            background: var(--gris-fondo);
+            border: 1px solid var(--gris-bordes);
+            color: var(--gris-texto);
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        #input:focus { border-color: var(--rojo); }
+
+        #input::placeholder { color: #A0A0A0; }
+
+        #send {
+            width: 40px;
+            height: 40px;
+            background: var(--rojo);
+            border: none;
+            border-radius: 50%;
+            color: var(--blanco);
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        #send:hover { background: #B00D23; transform: scale(1.05); }
+        #send:active { transform: scale(0.95); }
+        #send:disabled { background: #CCCCCC; cursor: not-allowed; }
+
+        /* ── ANIMACIONES ── */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 480px) {
+            #chat-window { width: 100%; height: 100%; bottom: 0; right: 0; border-radius: 0; }
+            #chat-bubble { bottom: 10px; right: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Contenido de ejemplo de la página principal -->
+<main style="padding: 50px; text-align: center;">
+    <h1>Página Principal de Prueba</h1>
+    <p>Haz clic en la burbuja en la esquina inferior derecha para abrir el chatbot.</p>
+</main>
+
+<!-- BOTÓN FLOTANTE -->
+<div id="chat-bubble" onclick="toggleChat()">💬</div>
+
+<!-- VENTANA DEL CHAT -->
+<div id="chat-window">
+    <!-- HEADER -->
+    <header>
+        <div class="header-left">
+            <div class="logo"></div>
+            <div class="header-title">
+                <h1>Correos de Bolivia</h1>
+                <span>Asistente Virtual Oficial</span>
+            </div>
+        </div>
+        <div id="status-dot">
+            <div class="dot" id="dot"></div>
+            <span id="status-text">Conectando...</span>
+        </div>
+        <button id="clear-chat" onclick="clearConversation()" title="Borrar conversación">🗑️</button>
+    </header>
+
+    <!-- CHAT -->
+    <div id="chat">
+        <div class="bienvenida" id="bienvenida">
+            <div class="icono">📬</div>
+            <h2>¡Bienvenido!</h2>
+            <p>Estamos aquí para asistirte con consultas sobre servicios postales, tarifas, rastreo de envíos y más.</p>
+            <div class="sugerencias">
+                <button class="sugerencia" onclick="usarSugerencia(this)">¿Cómo realizar un envío?</button>
+                <button class="sugerencia" onclick="usarSugerencia(this)">¿Cuáles son las tarifas actuales?</button>
+                <button class="sugerencia" onclick="usarSugerencia(this)">¿Qué es el servicio EMS?</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FORM -->
+    <div id="form-area">
+        <form id="form">
+            <input type="text" id="input" placeholder="Escribe tu consulta aquí..." autocomplete="off" />
+            <button type="submit" id="send">➤</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    // ── TOGGLE CHAT ──
+    function toggleChat() {
+        const window = document.getElementById('chat-window');
+        window.classList.toggle('open');
+        if (window.classList.contains('open')) {
+            checkStatus();
+        }
+    }
+
+    let esperandoRespuesta = false;
+
+    // ── STATUS ──
+    async function checkStatus() {
+        try {
+            const res = await fetch('/api/status');
+            const data = await res.json();
+            document.getElementById('dot').className = 'dot activo';
+            document.getElementById('status-text').textContent = `En línea · ${data.chunks || data.chunks_indexados} docs`;
+        } catch {
+            document.getElementById('dot').className = 'dot error';
+            document.getElementById('status-text').textContent = 'Sin conexión';
+        }
+    }
+
+    // ── AGREGAR MENSAJE ──
+    function addMessage(text, tipo) {
+        const bienvenida = document.getElementById('bienvenida');
+        if (bienvenida) bienvenida.remove();
+
+        const chat = document.getElementById('chat');
+        const wrap = document.createElement('div');
+        wrap.className = `message ${tipo}`;
+
+        const avatar = document.createElement('div');
+        avatar.className = 'avatar';
+        avatar.textContent = tipo === 'user' ? '👤' : '🤖';
+
+        const bubble = document.createElement('div');
+        bubble.className = 'bubble';
+        bubble.textContent = text;
+
+        wrap.appendChild(avatar);
+        wrap.appendChild(bubble);
+        chat.appendChild(wrap);
+        chat.scrollTop = chat.scrollHeight;
+        return wrap;
+    }
+
+    // ── TYPING ──
+    function showTyping() {
+        const bienvenida = document.getElementById('bienvenida');
+        if (bienvenida) bienvenida.remove();
+
+        const chat = document.getElementById('chat');
+        const wrap = document.createElement('div');
+        wrap.className = 'message bot typing';
+        wrap.id = 'typing';
+
+        const avatar = document.createElement('div');
+        avatar.className = 'avatar';
+        avatar.textContent = '🤖';
+
+        const bubble = document.createElement('div');
+        bubble.className = 'bubble';
+        bubble.innerHTML = '<div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>';
+
+        wrap.appendChild(avatar);
+        wrap.appendChild(bubble);
+        chat.appendChild(wrap);
+        chat.scrollTop = chat.scrollHeight;
+    }
+
+    function removeTyping() {
+        const t = document.getElementById('typing');
+        if (t) t.remove();
+    }
+
+    // ── ENVIAR ──
+    async function sendMessage(msg) {
+        if (esperandoRespuesta || !msg.trim()) return;
+        esperandoRespuesta = true;
+
+        const btn = document.getElementById('send');
+        const inp = document.getElementById('input');
+        btn.disabled = true;
+        inp.disabled = true;
+
+        addMessage(msg, 'user');
+        showTyping();
+
+        try {
+            const res = await fetch('/api/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: msg })
+            });
+            const data = await res.json();
+            removeTyping();
+            addMessage(data.response || data.error || 'Sin respuesta disponible', 'bot');
+        } catch (e) {
+            removeTyping();
+            addMessage('Error de conexión. Por favor, verifica que el servidor esté activo.', 'bot');
+        }
+
+        esperandoRespuesta = false;
+        btn.disabled = false;
+        inp.disabled = false;
+        inp.focus();
+    }
+
+    function usarSugerencia(btn) {
+        const texto = btn.textContent;
+        document.getElementById('input').value = texto;
+        sendMessage(texto);
+    }
+
+    // ── BORRAR CONVERSACIÓN ──
+    function clearConversation() {
+        if (confirm("¿Estás seguro de que quieres borrar la conversación?")) {
+            const chat = document.getElementById('chat');
+            chat.innerHTML = ''; // Limpiar todos los mensajes
+            const bienvenida = document.createElement('div');
+            bienvenida.className = 'bienvenida';
+            bienvenida.id = 'bienvenida';
+            bienvenida.innerHTML = `
+                <div class="icono">📬</div>
+                <h2>¡Bienvenido!</h2>
+                <p>Estamos aquí para asistirte con consultas sobre servicios postales, tarifas, rastreo de envíos y más.</p>
+                <div class="sugerencias">
+                    <button class="sugerencia" onclick="usarSugerencia(this)">¿Cómo realizar un envío?</button>
+                    <button class="sugerencia" onclick="usarSugerencia(this)">¿Cuáles son las tarifas actuales?</button>
+                    <button class="sugerencia" onclick="usarSugerencia(this)">¿Qué es el servicio EMS?</button>
+                </div>
+            `;
+            chat.appendChild(bienvenida);
+            chat.scrollTop = chat.scrollHeight;
+        }
+    }
+
+    document.getElementById('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const inp = document.getElementById('input');
+        const text = inp.value.trim();
+        if (!text) return;
+        inp.value = '';
+        sendMessage(text);
+    });
+
+    // Chequeo inicial opcional
+    // checkStatus();
+</script>
+</body>
+</html>
