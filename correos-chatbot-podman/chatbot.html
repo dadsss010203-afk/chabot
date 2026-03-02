@@ -4,277 +4,299 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Widget de Asistente Virtual — Correos de Bolivia</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
         :root {
-            --rojo: #C8102E; /* Rojo institucional */
-            --azul: #003366; /* Azul institucional */
-            --gris-fondo: #F4F6F8;
-            --gris-texto: #4A4A4A;
+            --azul:        #003DA5;
+            --azul-oscuro: #002680;
+            --azul-claro:  #E8EFFE;
+            --amarillo:    #FFD100;
+            --amarillo-hover: #F0C300;
+            --gris-fondo:  #F4F6F8;
+            --gris-texto:  #3A3A3A;
             --gris-bordes: #DDE2E8;
-            --blanco: #FFFFFF;
-            --verde-estado: #27AE60;
-            --rojo-error: #E74C3C;
-            --sombra: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --blanco:      #FFFFFF;
+            --verde-estado:#27AE60;
+            --rojo-error:  #E74C3C;
+            --sombra:      0 4px 20px rgba(0, 61, 165, 0.15);
+            --sombra-sm:   0 2px 8px rgba(0, 0, 0, 0.08);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Open Sans', sans-serif;
-            background: #f0f0f0; /* Fondo de ejemplo para la página principal */
+            font-family: 'Sora', sans-serif;
+            background: #e9ecef;
             height: 100vh;
             position: relative;
         }
 
-        /* ── BOTÓN FLOTANTE (BURBUJA) ── */
+        /* ── BOTÓN FLOTANTE ── */
         #chat-bubble {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            background: var(--rojo);
+            bottom: 24px;
+            right: 24px;
+            width: 64px;
+            height: 64px;
+            background: var(--azul);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--blanco);
-            font-size: 28px;
             cursor: pointer;
-            box-shadow: var(--sombra);
-            transition: all 0.3s;
+            box-shadow: 0 4px 24px rgba(0, 61, 165, 0.4);
+            transition: all 0.3s cubic-bezier(.34,1.56,.64,1);
             z-index: 1000;
+            border: 3px solid var(--amarillo);
         }
 
-        #chat-bubble:hover {
-            transform: scale(1.1);
-            background: #B00D23;
+        #chat-bubble:hover { transform: scale(1.12); background: var(--azul-oscuro); }
+        #chat-bubble svg   { width: 28px; height: 28px; fill: var(--amarillo); }
+
+        #bubble-badge {
+            position: absolute;
+            top: -2px; right: -2px;
+            width: 18px; height: 18px;
+            background: var(--amarillo);
+            border-radius: 50%;
+            border: 2px solid var(--blanco);
+            animation: pulse-badge 2s infinite;
+        }
+
+        @keyframes pulse-badge {
+            0%, 100% { transform: scale(1); }
+            50%       { transform: scale(1.2); }
         }
 
         /* ── VENTANA DEL CHAT ── */
         #chat-window {
             position: fixed;
-            bottom: 90px;
-            right: 20px;
-            width: 360px;
-            height: 500px;
+            bottom: 100px; right: 24px;
+            width: 370px; height: 520px;
             background: var(--blanco);
-            border-radius: 16px;
+            border-radius: 20px;
             box-shadow: var(--sombra);
             display: none;
             flex-direction: column;
             overflow: hidden;
             z-index: 999;
-            transition: all 0.3s;
+            border: 1.5px solid var(--gris-bordes);
         }
 
         #chat-window.open {
             display: flex;
+            animation: slideIn 0.3s cubic-bezier(.34,1.56,.64,1);
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px) scale(0.96); }
+            to   { opacity: 1; transform: translateY(0) scale(1); }
         }
 
         /* ── HEADER ── */
         header {
-            background: var(--blanco);
-            border-bottom: 1px solid var(--gris-bordes);
-            padding: 12px 20px;
+            background: var(--azul);
+            padding: 0 14px;
+            height: 52px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex-shrink: 0;
+            position: relative;
+            overflow: hidden;
         }
 
-        .header-left {
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 3px;
+            background: var(--amarillo);
+        }
+
+        .header-logo {
+            width: 34px; height: 34px;
+            background: var(--amarillo);
+            border-radius: 50%;
             display: flex;
             align-items: center;
-            gap: 12px;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.25);
         }
 
-        .logo {
-            width: 40px;
-            height: 40px;
-            background: url('https://via.placeholder.com/40?text=CB') center/cover; /* Logo oficial */
-            border-radius: 50%;
+        .header-center {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            pointer-events: none;
         }
 
-        .header-title h1 {
-            font-size: 1.2rem;
+        .header-center h1 {
+            font-size: 0.88rem;
             font-weight: 700;
-            color: var(--azul);
+            color: var(--blanco);
+            white-space: nowrap;
+            letter-spacing: 0.02em;
         }
 
-        .header-title span {
-            font-size: 0.8rem;
-            color: var(--gris-texto);
-            font-weight: 300;
+        .header-center .dot-title {
+            width: 7px; height: 7px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.4);
+            transition: background 0.3s;
+        }
+        .header-center .dot-title.activo { background: #4ade80; box-shadow: 0 0 6px #4ade80; }
+        .header-center .dot-title.error  { background: var(--rojo-error); }
+
+        .header-right { display: flex; align-items: center; gap: 6px; z-index: 1; }
+
+        .header-btn {
+            width: 26px; height: 26px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 700;
+            transition: all 0.2s;
+            background: rgba(255,255,255,0.12);
+            color: var(--blanco);
         }
 
-        #status-dot {
+        .header-btn:hover        { background: rgba(255,209,0,0.3); color: var(--amarillo); }
+        .header-btn.danger:hover { background: rgba(231,76,60,0.7); color: var(--blanco); }
+
+        #status-bar {
+            background: rgba(0, 38, 128, 0.95);
+            padding: 3px 14px;
             display: flex;
             align-items: center;
             gap: 6px;
-            font-size: 0.75rem;
-            color: var(--gris-texto);
+            font-size: 0.68rem;
+            color: rgba(255,255,255,0.7);
+            flex-shrink: 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
         }
 
-        .dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #AEB6BF;
-            transition: background 0.3s;
-        }
-
-        .dot.activo { background: var(--verde-estado); }
-        .dot.error { background: var(--rojo-error); }
-
-        /* Botón de borrar conversación */
-        #clear-chat {
-            background: none;
-            border: none;
-            color: var(--gris-texto);
-            font-size: 18px;
-            cursor: pointer;
-            transition: color 0.3s;
-        }
-
-        #clear-chat:hover {
-            color: var(--rojo-error);
-        }
+        .dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.4); transition: background 0.3s; }
+        .dot.activo { background: #4ade80; box-shadow: 0 0 6px #4ade80; }
+        .dot.error  { background: var(--rojo-error); }
 
         /* ── CHAT AREA ── */
         #chat {
             flex: 1;
             overflow-y: auto;
-            padding: 20px;
+            padding: 16px;
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 14px;
             background: var(--gris-fondo);
             scroll-behavior: smooth;
         }
 
-        #chat::-webkit-scrollbar { width: 5px; }
-        #chat::-webkit-scrollbar-track { background: var(--gris-fondo); }
-        #chat::-webkit-scrollbar-thumb { background: var(--gris-bordes); border-radius: 2.5px; }
+        #chat::-webkit-scrollbar       { width: 4px; }
+        #chat::-webkit-scrollbar-track { background: transparent; }
+        #chat::-webkit-scrollbar-thumb { background: var(--gris-bordes); border-radius: 2px; }
 
-        /* Mensaje de bienvenida */
+        /* ── BIENVENIDA ── */
         .bienvenida {
             text-align: center;
-            padding: 20px;
+            padding: 18px 14px;
             background: var(--blanco);
-            border-radius: 12px;
-            box-shadow: var(--sombra);
+            border-radius: 14px;
+            box-shadow: var(--sombra-sm);
+            border: 1px solid var(--gris-bordes);
         }
 
-        .bienvenida .icono {
-            font-size: 2.5rem;
-            color: var(--rojo);
-            margin-bottom: 10px;
-        }
+        .bienvenida .icono { font-size: 2.2rem; margin-bottom: 8px; }
 
         .bienvenida h2 {
-            font-size: 1.3rem;
-            font-weight: 600;
+            font-size: 1rem;
+            font-weight: 700;
             color: var(--azul);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .bienvenida p {
-            font-size: 0.9rem;
+            font-size: 0.82rem;
             color: var(--gris-texto);
             line-height: 1.5;
-            margin-bottom: 20px;
+            margin-bottom: 14px;
         }
 
-        .sugerencias {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            justify-content: center;
-        }
+        .sugerencias { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
 
         .sugerencia {
-            background: var(--blanco);
-            border: 1px solid var(--gris-bordes);
-            color: var(--gris-texto);
-            padding: 6px 12px;
-            border-radius: 16px;
-            font-size: 0.8rem;
+            background: var(--azul-claro);
+            border: 1.5px solid var(--azul);
+            color: var(--azul);
+            padding: 5px 11px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-family: 'Sora', sans-serif;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.25s;
+            font-weight: 600;
         }
 
         .sugerencia:hover {
-            background: var(--rojo);
-            color: var(--blanco);
-            border-color: var(--rojo);
+            background: var(--azul);
+            color: var(--amarillo);
+            border-color: var(--azul);
+            transform: translateY(-1px);
         }
 
-        /* Burbujas de mensaje */
+        /* ── MENSAJES ── */
         .message {
             display: flex;
-            gap: 10px;
+            gap: 8px;
             max-width: 100%;
-            animation: slideUp 0.5s ease;
+            animation: fadeUp 0.35s ease;
         }
 
-        .message.user {
-            align-self: flex-end;
-            flex-direction: row-reverse;
-        }
+        .message.user { align-self: flex-end;  flex-direction: row-reverse; }
+        .message.bot  { align-self: flex-start; }
 
-        .message.bot {
-            align-self: flex-start;
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
 
         .avatar {
-            width: 30px;
-            height: 30px;
+            width: 28px; height: 28px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 14px;
+            font-size: 13px;
             flex-shrink: 0;
-            color: var(--blanco);
         }
 
-        .message.user .avatar {
-            background: var(--rojo);
-        }
-
-        .message.bot .avatar {
-            background: var(--azul);
-        }
+        .message.user .avatar { background: var(--amarillo); color: var(--azul); font-weight: 700; }
+        .message.bot  .avatar { background: var(--azul);     color: var(--amarillo); }
 
         .bubble {
-            padding: 10px 15px;
-            border-radius: 16px;
-            font-size: 0.9rem;
-            line-height: 1.4;
+            padding: 9px 13px;
+            border-radius: 14px;
+            font-size: 0.85rem;
+            line-height: 1.5;
             word-wrap: break-word;
-            box-shadow: var(--sombra);
-            position: relative;
+            max-width: 78%;
+            box-shadow: var(--sombra-sm);
         }
 
         .message.user .bubble {
-            background: var(--rojo);
+            background: var(--azul);
             color: var(--blanco);
             border-bottom-right-radius: 4px;
-        }
-
-        .message.user .bubble::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: -8px;
-            width: 0;
-            height: 0;
-            border: 8px solid transparent;
-            border-top-color: var(--rojo);
-            border-right: 0;
-            transform: rotate(45deg);
         }
 
         .message.bot .bubble {
@@ -284,144 +306,424 @@
             border-bottom-left-radius: 4px;
         }
 
-        .message.bot .bubble::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: -8px;
-            width: 0;
-            height: 0;
-            border: 8px solid transparent;
-            border-top-color: var(--blanco);
-            border-left: 0;
-            transform: rotate(-45deg);
+        .bubble.despedida-bubble {
+            background: linear-gradient(135deg, var(--azul) 0%, var(--azul-oscuro) 100%);
+            color: var(--amarillo);
+            border: none;
+            font-weight: 600;
         }
 
-        /* Typing indicator */
+        /* ── TARJETA DE SUCURSAL ── */
+        .sucursal-card {
+            background: var(--blanco);
+            border: 1.5px solid var(--azul);
+            border-radius: 14px;
+            overflow: hidden;
+            max-width: 260px;
+            box-shadow: var(--sombra-sm);
+            font-size: 0.82rem;
+        }
+
+        .sc-cabecera {
+            background: var(--azul);
+            padding: 10px 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sc-cabecera span {
+            font-size: 18px;
+        }
+
+        .sc-cabecera strong {
+            color: var(--amarillo);
+            font-size: 0.83rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .sc-body {
+            padding: 10px 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .sc-fila {
+            display: flex;
+            align-items: flex-start;
+            gap: 7px;
+            color: var(--gris-texto);
+            font-size: 0.78rem;
+            line-height: 1.4;
+        }
+
+        .sc-fila .ic { flex-shrink: 0; font-size: 13px; margin-top: 1px; }
+
+        .sc-btn-maps {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            margin: 4px 12px 12px;
+            padding: 9px 0;
+            background: var(--amarillo);
+            color: var(--azul);
+            border: none;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            font-family: 'Sora', sans-serif;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.15s;
+            box-shadow: 0 2px 8px rgba(255,209,0,0.35);
+        }
+
+        .sc-btn-maps:hover {
+            background: var(--amarillo-hover);
+            transform: translateY(-1px);
+        }
+
+        /* Typing */
         .typing .bubble {
             display: flex;
             align-items: center;
-            gap: 5px;
-            padding: 10px 15px;
+            gap: 4px;
+            padding: 12px 14px;
             background: var(--blanco);
             border: 1px solid var(--gris-bordes);
-            border-radius: 16px;
-            box-shadow: var(--sombra);
         }
 
         .typing-dot {
-            width: 6px;
-            height: 6px;
-            background: var(--gris-texto);
+            width: 6px; height: 6px;
             border-radius: 50%;
-            animation: bounce 1.4s infinite;
+            animation: bounce 1.2s infinite;
+            opacity: 0.8;
         }
+        .typing-dot:nth-child(1) { background: var(--azul); }
+        .typing-dot:nth-child(2) { background: var(--amarillo-hover); animation-delay: 0.2s; }
+        .typing-dot:nth-child(3) { background: var(--azul); animation-delay: 0.4s; }
 
-        .typing-dot:nth-child(2) { animation-delay: 0.3s; }
-        .typing-dot:nth-child(3) { animation-delay: 0.6s; }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50%       { transform: translateY(-5px); }
+        }
 
         /* ── FORM ── */
         #form-area {
             background: var(--blanco);
-            border-top: 1px solid var(--gris-bordes);
-            padding: 12px 20px;
+            border-top: 2px solid var(--amarillo);
+            padding: 12px 14px;
             flex-shrink: 0;
         }
 
-        #form {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
+        #form { display: flex; gap: 8px; align-items: center; }
 
         #input {
             flex: 1;
             background: var(--gris-fondo);
-            border: 1px solid var(--gris-bordes);
+            border: 1.5px solid var(--gris-bordes);
             color: var(--gris-texto);
-            padding: 8px 12px;
-            border-radius: 20px;
-            font-size: 0.9rem;
+            padding: 9px 14px;
+            border-radius: 22px;
+            font-size: 0.85rem;
+            font-family: 'Sora', sans-serif;
             outline: none;
-            transition: border-color 0.3s;
+            transition: border-color 0.25s, box-shadow 0.25s;
         }
 
-        #input:focus { border-color: var(--rojo); }
+        #input:focus {
+            border-color: var(--azul);
+            box-shadow: 0 0 0 3px rgba(0, 61, 165, 0.12);
+        }
 
         #input::placeholder { color: #A0A0A0; }
+        #input:disabled { background: #f0f0f0; cursor: not-allowed; opacity: 0.6; }
 
         #send {
-            width: 40px;
-            height: 40px;
-            background: var(--rojo);
+            width: 40px; height: 40px;
+            background: var(--amarillo);
+            border: none;
+            border-radius: 50%;
+            color: var(--azul);
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.25s;
+            flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(255, 209, 0, 0.4);
+        }
+
+        #send:hover  { background: var(--amarillo-hover); transform: scale(1.08); }
+        #send:active { transform: scale(0.95); }
+        #send:disabled { background: #CCC; cursor: not-allowed; box-shadow: none; }
+
+        #stop {
+            width: 40px; height: 40px;
+            background: var(--rojo-error);
             border: none;
             border-radius: 50%;
             color: var(--blanco);
+            font-size: 16px;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.25s;
+            flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(231, 76, 60, 0.4);
+            animation: aparecer 0.2s ease;
+        }
+
+        #stop:hover  { background: #c0392b; transform: scale(1.08); }
+        #stop:active { transform: scale(0.95); }
+        #stop.visible { display: flex; }
+
+        @keyframes aparecer {
+            from { opacity: 0; transform: scale(0.7); }
+            to   { opacity: 1; transform: scale(1); }
+        }
+
+        @media (max-width: 480px) {
+            #chat-window { width: 100%; height: 100%; bottom: 0; right: 0; border-radius: 0; }
+            #chat-bubble  { bottom: 12px; right: 12px; }
+        }
+
+        /* ── BARRA CONFIRMAR BORRAR ── */
+        #confirm-bar {
+            display: none;
+            background: var(--azul-oscuro);
+            border-top: 2px solid var(--amarillo);
+            padding: 10px 14px;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            flex-shrink: 0;
+            animation: slideUpBar 0.2s ease;
+        }
+
+        #confirm-bar.open { display: flex; }
+
+        @keyframes slideUpBar {
+            from { opacity: 0; transform: translateY(6px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        #confirm-bar p { font-size: 0.78rem; color: rgba(255,255,255,0.9); flex: 1; }
+        #confirm-bar p span { color: var(--amarillo); font-weight: 700; }
+
+        .confirm-bar-btns { display: flex; gap: 6px; }
+
+        .confirm-bar-btns button {
+            padding: 5px 12px;
+            border-radius: 8px;
+            border: none;
+            font-family: 'Sora', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-no { background: rgba(255,255,255,0.12); color: var(--blanco); border: 1px solid rgba(255,255,255,0.2) !important; }
+        .btn-no:hover { background: rgba(255,255,255,0.22) !important; }
+        .btn-si { background: var(--amarillo); color: var(--azul); }
+        .btn-si:hover { background: var(--amarillo-hover) !important; transform: scale(1.05); }
+
+        /* ── MODAL MAPA ── */
+        #mapa-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.55);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.2s ease;
+        }
+
+        #mapa-modal.open { display: flex; }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        #mapa-contenedor {
+            background: var(--blanco);
+            border-radius: 18px;
+            overflow: hidden;
+            width: 500px;
+            max-width: 95vw;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+            animation: slideIn 0.3s cubic-bezier(.34,1.56,.64,1);
+        }
+
+        #mapa-header {
+            background: var(--azul);
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 3px solid var(--amarillo);
+        }
+
+        #mapa-header h3 { color: var(--blanco); font-size: 0.95rem; font-weight: 700; }
+        #mapa-header span { color: rgba(255,255,255,0.7); font-size: 0.75rem; }
+
+        #cerrar-mapa {
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: var(--blanco);
+            width: 28px; height: 28px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        #cerrar-mapa:hover { background: rgba(255,209,0,0.3); }
+
+        #mapa { height: 320px; width: 100%; }
+
+        #sucursales-lista {
+            padding: 12px 16px;
+            max-height: 160px;
+            overflow-y: auto;
+            background: var(--gris-fondo);
+        }
+
+        .sucursal-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 8px 10px;
+            background: var(--blanco);
+            border-radius: 10px;
+            margin-bottom: 6px;
+            border: 1px solid var(--gris-bordes);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .sucursal-item:hover { border-color: var(--azul); background: var(--azul-claro); }
+        .sucursal-icono { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+        .sucursal-info h4 { font-size: 0.82rem; font-weight: 700; color: var(--azul); }
+        .sucursal-info p  { font-size: 0.75rem; color: var(--gris-texto); margin-top: 2px; }
+
+        #btn-mapa {
+            width: 40px; height: 40px;
+            background: var(--azul-claro);
+            border: 1.5px solid var(--azul);
+            border-radius: 50%;
+            color: var(--azul);
             font-size: 18px;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s;
+            transition: all 0.25s;
+            flex-shrink: 0;
         }
 
-        #send:hover { background: #B00D23; transform: scale(1.05); }
-        #send:active { transform: scale(0.95); }
-        #send:disabled { background: #CCCCCC; cursor: not-allowed; }
+        #btn-mapa:hover { background: var(--azul); color: var(--amarillo); transform: scale(1.08); }
 
-        /* ── ANIMACIONES ── */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        /* ── SELECTOR DE IDIOMA ── */
+        #lang-selector {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 10px;
+            background: var(--gris-fondo);
+            border-top: 1px solid var(--gris-bordes);
+            flex-shrink: 0;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+        #lang-selector::-webkit-scrollbar { display: none; }
+
+        #lang-selector span {
+            font-size: 0.65rem;
+            color: #999;
+            white-space: nowrap;
+            margin-right: 2px;
         }
 
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
+        .lang-btn {
+            background: none;
+            border: 1.5px solid transparent;
+            border-radius: 6px;
+            padding: 3px 7px;
+            font-size: 0.72rem;
+            cursor: pointer;
+            font-family: 'Sora', sans-serif;
+            color: var(--gris-texto);
+            white-space: nowrap;
+            transition: all 0.2s;
+            flex-shrink: 0;
         }
 
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-6px); }
-        }
+        .lang-btn:hover { border-color: var(--azul); color: var(--azul); background: var(--azul-claro); }
 
-        /* ── RESPONSIVE ── */
-        @media (max-width: 480px) {
-            #chat-window { width: 100%; height: 100%; bottom: 0; right: 0; border-radius: 0; }
-            #chat-bubble { bottom: 10px; right: 10px; }
+        .lang-btn.activo {
+            background: var(--azul);
+            color: var(--amarillo);
+            border-color: var(--azul);
+            font-weight: 700;
         }
     </style>
 </head>
 <body>
 
-<!-- Contenido de ejemplo de la página principal -->
 <main style="padding: 50px; text-align: center;">
     <h1>Página Principal de Prueba</h1>
     <p>Haz clic en la burbuja en la esquina inferior derecha para abrir el chatbot.</p>
 </main>
 
 <!-- BOTÓN FLOTANTE -->
-<div id="chat-bubble" onclick="toggleChat()">💬</div>
+<div id="chat-bubble" onclick="toggleChat()">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 2H4C2.9 2 2 2.9 2 4v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+    </svg>
+    <div id="bubble-badge"></div>
+</div>
 
 <!-- VENTANA DEL CHAT -->
 <div id="chat-window">
-    <!-- HEADER -->
     <header>
-        <div class="header-left">
-            <div class="logo"></div>
-            <div class="header-title">
-                <h1>Correos de Bolivia</h1>
-                <span>Asistente Virtual Oficial</span>
-            </div>
+        <div class="header-logo">📬</div>
+
+        <div class="header-center">
+            <div class="dot-title" id="dot"></div>
+            <h1>Correos de Bolivia</h1>
         </div>
-        <div id="status-dot">
-            <div class="dot" id="dot"></div>
-            <span id="status-text">Conectando...</span>
+
+        <div class="header-right">
+            <button class="header-btn" onclick="clearConversation()" title="Borrar conversación">🗑️</button>
+            <button class="header-btn" onclick="minimizarChat()" title="Minimizar">─</button>
+            <button class="header-btn danger" onclick="toggleChat()" title="Cerrar">✕</button>
         </div>
-        <button id="clear-chat" onclick="clearConversation()" title="Borrar conversación">🗑️</button>
     </header>
 
-    <!-- CHAT -->
+    <div id="status-bar">
+        <div class="dot" id="dot-bar"></div>
+        <span id="status-text">Conectando...</span>
+    </div>
+
+    <!-- SELECTOR DE IDIOMA -->
+    <div id="lang-selector">
+        <span>🌐</span>
+        <button class="lang-btn activo" data-lang="es" onclick="cambiarIdioma('es')">🇧🇴 ES</button>
+        <button class="lang-btn"        data-lang="en" onclick="cambiarIdioma('en')">🇺🇸 EN</button>
+        <button class="lang-btn"        data-lang="fr" onclick="cambiarIdioma('fr')">🇫🇷 FR</button>
+        <button class="lang-btn"        data-lang="pt" onclick="cambiarIdioma('pt')">🇧🇷 PT</button>
+        <button class="lang-btn"        data-lang="zh" onclick="cambiarIdioma('zh')">🇨🇳 中文</button>
+    </div>
+
     <div id="chat">
         <div class="bienvenida" id="bienvenida">
             <div class="icono">📬</div>
@@ -431,46 +733,165 @@
                 <button class="sugerencia" onclick="usarSugerencia(this)">¿Cómo realizar un envío?</button>
                 <button class="sugerencia" onclick="usarSugerencia(this)">¿Cuáles son las tarifas actuales?</button>
                 <button class="sugerencia" onclick="usarSugerencia(this)">¿Qué es el servicio EMS?</button>
+                <button class="sugerencia" onclick="usarSugerencia(this)">Sucursal de La Paz</button>
             </div>
+            <!-- Las sugerencias se actualizan dinámicamente al cambiar idioma -->
         </div>
     </div>
 
-    <!-- FORM -->
     <div id="form-area">
         <form id="form">
+            <button type="button" id="btn-mapa" onclick="abrirMapa()" title="Ver sucursales en mapa">📍</button>
             <input type="text" id="input" placeholder="Escribe tu consulta aquí..." autocomplete="off" />
+            <button type="button" id="stop" onclick="detenerRespuesta()" title="Detener respuesta">⏹</button>
             <button type="submit" id="send">➤</button>
         </form>
+    </div>
+
+    <div id="confirm-bar">
+        <p>🗑️ ¿Borrar <span>toda la conversación</span>?</p>
+        <div class="confirm-bar-btns">
+            <button class="btn-no" onclick="cerrarConfirm()">No</button>
+            <button class="btn-si" onclick="confirmarBorrar()">Sí, borrar</button>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL MAPA -->
+<div id="mapa-modal">
+    <div id="mapa-contenedor">
+        <div id="mapa-header">
+            <div>
+                <h3>📍 Sucursales Correos Bolivia</h3>
+                <span>Haz clic en una sucursal para ver detalles</span>
+            </div>
+            <button id="cerrar-mapa" onclick="cerrarMapa()">✕</button>
+        </div>
+        <div id="mapa"></div>
+        <div id="sucursales-lista"></div>
     </div>
 </div>
 
 <script>
-    // ── TOGGLE CHAT ──
-    function toggleChat() {
-        const window = document.getElementById('chat-window');
-        window.classList.toggle('open');
-        if (window.classList.contains('open')) {
-            checkStatus();
+    let chatAbierto        = false;
+    let bienvenidaCargada  = false;
+    let esperandoRespuesta = false;
+    let abortController    = null;
+    let idiomaActual       = 'es';   // idioma seleccionado
+
+    // Textos de UI por idioma (para sugerencias y placeholders)
+    const UI_TEXTOS = {
+        es: {
+            placeholder : "Escribe tu consulta aquí...",
+            finalizado  : "Conversación finalizada",
+            sugerencias : ["¿Cómo realizar un envío?", "¿Cuáles son las tarifas actuales?", "¿Qué es el servicio EMS?", "Sucursal de La Paz"],
+        },
+        en: {
+            placeholder : "Type your question here...",
+            finalizado  : "Conversation ended",
+            sugerencias : ["How to send a package?", "What are the current rates?", "What is EMS service?", "La Paz branch"],
+        },
+        fr: {
+            placeholder : "Écrivez votre question ici...",
+            finalizado  : "Conversation terminée",
+            sugerencias : ["Comment envoyer un colis?", "Quels sont les tarifs?", "Qu'est-ce que le service EMS?", "Succursale de La Paz"],
+        },
+        pt: {
+            placeholder : "Digite sua consulta aqui...",
+            finalizado  : "Conversa encerrada",
+            sugerencias : ["Como enviar um pacote?", "Quais são as tarifas?", "O que é o serviço EMS?", "Agência de La Paz"],
+        },
+        zh: {
+            placeholder : "在此输入您的问题...",
+            finalizado  : "对话已结束",
+            sugerencias : ["如何寄包裹？", "当前费率是多少？", "什么是EMS服务？", "拉巴斯分部"],
+        },
+    };
+
+    function cambiarIdioma(lang) {
+        idiomaActual = lang;
+
+        // Actualizar botones activos
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.toggle('activo', btn.dataset.lang === lang);
+        });
+
+        // Actualizar placeholder del input
+        const ui = UI_TEXTOS[lang] || UI_TEXTOS.es;
+        document.getElementById('input').placeholder = ui.placeholder;
+
+        // Reiniciar conversación con el nuevo idioma
+        confirmarBorrar();
+    }
+
+    // ── STOP / SEND ──
+    function mostrarStop(visible) {
+        const stopBtn = document.getElementById('stop');
+        const sendBtn = document.getElementById('send');
+        if (visible) {
+            stopBtn.classList.add('visible');
+            sendBtn.style.display = 'none';
+        } else {
+            stopBtn.classList.remove('visible');
+            sendBtn.style.display = 'flex';
         }
     }
 
-    let esperandoRespuesta = false;
+    function detenerRespuesta() {
+        if (abortController) { abortController.abort(); abortController = null; }
+    }
+
+    // ── TOGGLE CHAT ──
+    function toggleChat() {
+        const win = document.getElementById('chat-window');
+        chatAbierto = !chatAbierto;
+        win.classList.toggle('open', chatAbierto);
+
+        if (chatAbierto) {
+            document.getElementById('bubble-badge').style.display = 'none';
+            checkStatus();
+            if (!bienvenidaCargada) { bienvenidaCargada = true; cargarBienvenida(); }
+        }
+    }
+
+    // ── BIENVENIDA ──
+    async function cargarBienvenida() {
+        await new Promise(r => setTimeout(r, 400));
+        showTyping();
+        await new Promise(r => setTimeout(r, 900));
+        removeTyping();
+        try {
+            const res  = await fetch(`/api/welcome?lang=${idiomaActual}`);
+            const data = await res.json();
+            addMessage(data.response, 'bot');
+        } catch {
+            addMessage('¡Hola! Bienvenido al asistente de Correos de Bolivia. ¿En qué puedo ayudarte hoy?', 'bot');
+        }
+    }
 
     // ── STATUS ──
     async function checkStatus() {
         try {
-            const res = await fetch('/api/status');
+            const res  = await fetch('/api/status');
             const data = await res.json();
-            document.getElementById('dot').className = 'dot activo';
-            document.getElementById('status-text').textContent = `En línea · ${data.chunks || data.chunks_indexados} docs`;
+            document.getElementById('dot').className     = 'dot-title activo';
+            document.getElementById('dot-bar').className = 'dot activo';
+            document.getElementById('status-text').textContent = `En línea · ${data.chunks} docs · ${data.modelo}`;
         } catch {
-            document.getElementById('dot').className = 'dot error';
+            document.getElementById('dot').className     = 'dot-title error';
+            document.getElementById('dot-bar').className = 'dot error';
             document.getElementById('status-text').textContent = 'Sin conexión';
         }
     }
 
+    function minimizarChat() {
+        document.getElementById('chat-window').classList.remove('open');
+        chatAbierto = false;
+    }
+
     // ── AGREGAR MENSAJE ──
-    function addMessage(text, tipo) {
+    // Si viene con datos de ubicacion, muestra la tarjeta en vez de texto plano
+    function addMessage(text, tipo, esDespedida = false, ubicacion = null) {
         const bienvenida = document.getElementById('bienvenida');
         if (bienvenida) bienvenida.remove();
 
@@ -482,15 +903,53 @@
         avatar.className = 'avatar';
         avatar.textContent = tipo === 'user' ? '👤' : '🤖';
 
-        const bubble = document.createElement('div');
-        bubble.className = 'bubble';
-        bubble.textContent = text;
+        // ── ¿Tarjeta de sucursal? ──
+        if (ubicacion && ubicacion.lat) {
+            const card = document.createElement('div');
+            card.className = 'sucursal-card';
+            card.innerHTML = `
+                <div class="sc-cabecera">
+                    <span>📍</span>
+                    <strong>${ubicacion.nombre}</strong>
+                </div>
+                <div class="sc-body">
+                    <div class="sc-fila">
+                        <span class="ic">🏠</span>
+                        <span>${ubicacion.direccion || 'No disponible'}</span>
+                    </div>
+                    <div class="sc-fila">
+                        <span class="ic">📞</span>
+                        <span>${ubicacion.telefono || 'No disponible'}</span>
+                    </div>
+                    ${ubicacion.email ? `
+                    <div class="sc-fila">
+                        <span class="ic">✉️</span>
+                        <span>${ubicacion.email}</span>
+                    </div>` : ''}
+                    <div class="sc-fila">
+                        <span class="ic">🕐</span>
+                        <span>${ubicacion.horario || 'No disponible'}</span>
+                    </div>
+                </div>
+                <a class="sc-btn-maps"
+                   href="${ubicacion.maps_url}"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    🗺️ Ver en Google Maps
+                </a>`;
+            wrap.appendChild(avatar);
+            wrap.appendChild(card);
+        } else {
+            // ── Burbuja de texto normal ──
+            const bubble = document.createElement('div');
+            bubble.className = 'bubble' + (esDespedida ? ' despedida-bubble' : '');
+            bubble.textContent = text;
+            wrap.appendChild(avatar);
+            wrap.appendChild(bubble);
+        }
 
-        wrap.appendChild(avatar);
-        wrap.appendChild(bubble);
         chat.appendChild(wrap);
         chat.scrollTop = chat.scrollHeight;
-        return wrap;
     }
 
     // ── TYPING ──
@@ -527,74 +986,189 @@
         if (esperandoRespuesta || !msg.trim()) return;
         esperandoRespuesta = true;
 
-        const btn = document.getElementById('send');
         const inp = document.getElementById('input');
-        btn.disabled = true;
         inp.disabled = true;
+        mostrarStop(true);
 
         addMessage(msg, 'user');
         showTyping();
 
+        abortController = new AbortController();
+
         try {
-            const res = await fetch('/api/chat', {
-                method: 'POST',
+            const res  = await fetch('/api/chat', {
+                method : 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ message: msg })
+                body   : JSON.stringify({ message: msg, lang: idiomaActual }),
+                signal : abortController.signal,
             });
             const data = await res.json();
             removeTyping();
-            addMessage(data.response || data.error || 'Sin respuesta disponible', 'bot');
+
+            const esDespedida = data.despedida === true;
+
+            // Si el backend devuelve "ubicacion", mostrar tarjeta; si no, texto normal
+            addMessage(
+                data.response || data.error || 'Sin respuesta disponible',
+                'bot',
+                esDespedida,
+                data.ubicacion || null
+            );
+
+            if (esDespedida) {
+                inp.disabled = true;
+                inp.placeholder = 'Conversación finalizada';
+                mostrarStop(false);
+                document.getElementById('send').disabled = true;
+                bienvenidaCargada = false;
+                return;
+            }
         } catch (e) {
             removeTyping();
-            addMessage('Error de conexión. Por favor, verifica que el servidor esté activo.', 'bot');
+            if (e.name === 'AbortError') {
+                addMessage('⏹ Respuesta detenida.', 'bot');
+            } else {
+                addMessage('Error de conexión. Verifica que el servidor esté activo.', 'bot');
+            }
         }
 
+        abortController    = null;
         esperandoRespuesta = false;
-        btn.disabled = false;
+        mostrarStop(false);
         inp.disabled = false;
         inp.focus();
     }
 
-    function usarSugerencia(btn) {
-        const texto = btn.textContent;
-        document.getElementById('input').value = texto;
-        sendMessage(texto);
-    }
+    function usarSugerencia(btn) { sendMessage(btn.textContent); }
 
-    // ── BORRAR CONVERSACIÓN ──
-    function clearConversation() {
-        if (confirm("¿Estás seguro de que quieres borrar la conversación?")) {
-            const chat = document.getElementById('chat');
-            chat.innerHTML = ''; // Limpiar todos los mensajes
-            const bienvenida = document.createElement('div');
-            bienvenida.className = 'bienvenida';
-            bienvenida.id = 'bienvenida';
-            bienvenida.innerHTML = `
-                <div class="icono">📬</div>
-                <h2>¡Bienvenido!</h2>
-                <p>Estamos aquí para asistirte con consultas sobre servicios postales, tarifas, rastreo de envíos y más.</p>
-                <div class="sugerencias">
-                    <button class="sugerencia" onclick="usarSugerencia(this)">¿Cómo realizar un envío?</button>
-                    <button class="sugerencia" onclick="usarSugerencia(this)">¿Cuáles son las tarifas actuales?</button>
-                    <button class="sugerencia" onclick="usarSugerencia(this)">¿Qué es el servicio EMS?</button>
-                </div>
-            `;
-            chat.appendChild(bienvenida);
-            chat.scrollTop = chat.scrollHeight;
-        }
+    // ── CONFIRMAR BORRAR ──
+    function clearConversation()  { document.getElementById('confirm-bar').classList.add('open'); }
+    function cerrarConfirm()      { document.getElementById('confirm-bar').classList.remove('open'); }
+
+    async function confirmarBorrar() {
+        cerrarConfirm();
+        try { await fetch('/api/reset', { method: 'POST' }); } catch {}
+
+        const chat = document.getElementById('chat');
+        chat.innerHTML = '';
+
+        const bienvenida = document.createElement('div');
+        bienvenida.className = 'bienvenida';
+        bienvenida.id = 'bienvenida';
+        const ui = UI_TEXTOS[idiomaActual] || UI_TEXTOS.es;
+        bienvenida.innerHTML = `
+            <div class="icono">📬</div>
+            <h2>¡Bienvenido!</h2>
+            <p>Estamos aquí para asistirte con consultas sobre servicios postales, tarifas, rastreo de envíos y más.</p>
+            <div class="sugerencias">
+                ${ui.sugerencias.map(s => `<button class="sugerencia" onclick="usarSugerencia(this)">${s}</button>`).join('')}
+            </div>`;
+        chat.appendChild(bienvenida);
+
+        const inp = document.getElementById('input');
+        inp.disabled = false;
+        inp.placeholder = 'Escribe tu consulta aquí...';
+        document.getElementById('send').disabled = false;
+        bienvenidaCargada = true;
+        cargarBienvenida();
     }
 
     document.getElementById('form').addEventListener('submit', function(e) {
         e.preventDefault();
-        const inp = document.getElementById('input');
+        const inp  = document.getElementById('input');
         const text = inp.value.trim();
         if (!text) return;
         inp.value = '';
         sendMessage(text);
     });
 
-    // Chequeo inicial opcional
-    // checkStatus();
+    // ── MAPA CON LEAFLET ──
+    // Carga las sucursales desde /api/sucursales (backend → JSON del scraper)
+    let mapaLeaflet = null;
+    let marcadores  = [];
+
+    async function abrirMapa() {
+        document.getElementById('mapa-modal').classList.add('open');
+
+        if (!mapaLeaflet) {
+            // Obtener sucursales desde el backend
+            let sucursales = [];
+            try {
+                const res  = await fetch('/api/sucursales');
+                const data = await res.json();
+                sucursales = data.sucursales || [];
+            } catch {
+                console.warn('No se pudo cargar /api/sucursales');
+            }
+
+            // Centro del mapa: Bolivia
+            const centro = sucursales.length > 0
+                ? [sucursales[0].lat || -16.5, sucursales[0].lng || -68.15]
+                : [-16.5, -68.15];
+
+            mapaLeaflet = L.map('mapa').setView(centro, 13);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(mapaLeaflet);
+
+            const iconoPersonalizado = L.divIcon({
+                className: '',
+                html: `<div style="
+                    background:#003DA5; color:#FFD100;
+                    width:32px; height:32px;
+                    border-radius:50% 50% 50% 0;
+                    transform:rotate(-45deg);
+                    border:3px solid #FFD100;
+                    display:flex; align-items:center; justify-content:center;
+                    box-shadow:0 2px 8px rgba(0,0,0,0.3);">
+                    <span style="transform:rotate(45deg); font-size:14px;">📬</span>
+                </div>`,
+                iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -34],
+            });
+
+            const lista = document.getElementById('sucursales-lista');
+
+            sucursales.forEach((s, i) => {
+                if (!s.lat || !s.lng) return;
+
+                const marker = L.marker([s.lat, s.lng], { icon: iconoPersonalizado })
+                    .addTo(mapaLeaflet)
+                    .bindPopup(`
+                        <b style="color:#003DA5">📬 ${s.nombre}</b><br>
+                        📍 ${s.direccion || ''}<br>
+                        🕐 ${s.horario || ''}
+                    `);
+                marcadores.push(marker);
+
+                const item = document.createElement('div');
+                item.className = 'sucursal-item';
+                item.innerHTML = `
+                    <div class="sucursal-icono">📬</div>
+                    <div class="sucursal-info">
+                        <h4>${s.nombre}</h4>
+                        <p>📍 ${s.direccion || 'No disponible'}</p>
+                        <p>🕐 ${s.horario   || 'No disponible'}</p>
+                    </div>`;
+                item.onclick = () => {
+                    mapaLeaflet.setView([s.lat, s.lng], 16);
+                    marcadores[i].openPopup();
+                };
+                lista.appendChild(item);
+            });
+        }
+
+        setTimeout(() => mapaLeaflet.invalidateSize(), 100);
+    }
+
+    function cerrarMapa() {
+        document.getElementById('mapa-modal').classList.remove('open');
+    }
+
+    document.getElementById('mapa-modal').addEventListener('click', function(e) {
+        if (e.target === this) cerrarMapa();
+    });
 </script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </body>
 </html>
