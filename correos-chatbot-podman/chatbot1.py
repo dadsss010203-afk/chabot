@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify, send_from_directory, session
+from flask_cors import CORS
 import os
 import re
 import json
@@ -14,6 +15,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 
 app = Flask(__name__)
 app.secret_key = "correos-bolivia-2026"
+CORS(app)
 
 # ─────────────────────────────────────────────
 #  CONFIG
@@ -26,7 +28,7 @@ CHROMA_PATH         = "chroma_db"
 CHUNK_SIZE          = 600
 BATCH_SIZE          = 500
 OLLAMA_URL          = "http://127.0.0.1:11434/api/chat"
-OLLAMA_TIMEOUT      = 1000
+OLLAMA_TIMEOUT      = 600
 N_RESULTADOS        = 3
 MAX_HISTORIAL       = 6
 HORAS_ACTUALIZACION = 24   # ← cada cuántas horas se actualiza la BD
@@ -48,24 +50,7 @@ ALIAS_CIUDADES = {
     "potosí"                 : "potosi",
 }
 
-# ─────────────────────────────────────────────
-#  COORDENADAS EXACTAS POR CIUDAD
-#  Obtenidas de los links de Google Maps del
-#  sitio correos.gob.bo
-#  La Paz usa su enlace directo oficial
-# ─────────────────────────────────────────────
-COORDS_CIUDADES = {
-    "la paz"    : {"lat": -16.499149, "lng": -68.135114},
-    "santa cruz": {"lat": -17.78349,  "lng": -63.17466},
-    "cochabamba": {"lat": -17.39282,  "lng": -66.15862},
-    "oruro"     : {"lat": -17.96870,  "lng": -67.11488},
-    "beni"      : {"lat": -14.83445,  "lng": -64.90328},
-    "potosi"    : {"lat": -19.58870,  "lng": -65.74893},
-    "potosí"    : {"lat": -19.58870,  "lng": -65.74893},
-    "tarija"    : {"lat": -21.53612,  "lng": -64.73457},
-    "sucre"     : {"lat": -19.04715,  "lng": -65.26139},
-    "pando"     : {"lat": -11.01772,  "lng": -68.75443},
-}
+
 
 # ─────────────────────────────────────────────
 #  IDIOMAS SOPORTADOS
@@ -176,14 +161,6 @@ def limpiar_campo(valor: str) -> str:
     ).strip()
 
 
-def obtener_coords_ciudad(nombre_sucursal: str) -> dict | None:
-    ciudad = re.sub(
-        r'^(regional|oficina\s+central)\s*:\s*', '',
-        nombre_sucursal.lower()
-    ).strip()
-    return COORDS_CIUDADES.get(ciudad)
-
-
 # ─────────────────────────────────────────────
 #  NOMINATIM — solo fallback para ciudades
 #  que no estén en COORDS_CIUDADES
@@ -234,22 +211,14 @@ def cargar_sucursales_json() -> list:
             sin_coords.append(s)
 
     if sin_coords:
-        print(f"📍 {len(sin_coords)} sucursales sin coords → asignando coordenadas...")
+        print(f"📍 {len(sin_coords)} sucursales sin coords → usando Nominatim...")
         for s in sin_coords:
-            nombre = s.get("nombre", "")
-            coords = obtener_coords_ciudad(nombre)
-            if coords:
-                s["lat"] = coords["lat"]
-                s["lng"] = coords["lng"]
-                ciudad = re.sub(r'^(regional|oficina\s+central)\s*:\s*', '', nombre.lower()).strip()
-                print(f"   📌 {ciudad}: lat={coords['lat']:.5f}, lng={coords['lng']:.5f}")
-                continue
-            ciudad = re.sub(r'^(regional|oficina\s+central)\s*:\s*', '', nombre.lower()).strip()
+            ciudad = re.sub(r'^(regional|oficina\s+central)\s*:\s*', '', s.get("nombre", "").lower()).strip()
             coords = _nominatim_fallback(s.get("direccion", ""), ciudad)
             if coords:
                 s["lat"] = coords["lat"]
                 s["lng"] = coords["lng"]
-                print(f"   🌍 Nominatim '{ciudad}': lat={coords['lat']:.5f}, lng={coords['lng']:.5f}")
+                print(f"   🌍 '{ciudad}': lat={coords['lat']:.5f}, lng={coords['lng']:.5f}")
             else:
                 print(f"   ⚠️  Sin coords: {ciudad}")
 
@@ -308,6 +277,25 @@ def _reindexar() -> bool:
             chunks.append(sucursal_a_texto(s))
             chunk_ids.append(f"suc_{i}")
         print(f"   → {len(SUCURSALES)} sucursales agregadas")
+
+    # ── Agregar secciones (Aplicativos, Servicios, etc.) ──────────
+    try:
+        if os.path.exists("data/secciones_home.json"):
+            with open("data/secciones_home.json", "r", encoding="utf-8") as f:
+                secciones = json.load(f)
+            
+            for seccion_nombre, items in secciones.items():
+                if items:
+                    # Crear un documento con toda la sección
+                    seccion_texto = f"## {seccion_nombre}\n\n"
+                    seccion_texto += "\n".join(f"- {item}" for item in items)
+                    chunks.append(seccion_texto)
+                    chunk_ids.append(f"sec_{seccion_nombre.replace(' ', '_')}")
+            
+            total_sec = sum(1 for items in secciones.values() if items)
+            print(f"📋 {total_sec} secciones agregadas (Servicios, Aplicativos, etc.)")
+    except Exception as e:
+        print(f"⚠️  No se pudieron agregar secciones: {e}")
 
     if not chunks:
         print("⚠️  Sin contenido para indexar")
@@ -428,7 +416,7 @@ Ejemplos:
             "stream"  : False,
             "options" : {"num_predict": 60, "temperature": 0},
         }
-        resp = requests.post(OLLAMA_URL, json=payload, timeout=15)
+        resp = requests.post(OLLAMA_URL, json=payload, timeout=30)
         resp.raise_for_status()
         raw = resp.json()["message"]["content"].strip()
 
@@ -621,6 +609,11 @@ def get_hora_bolivia() -> dict:
 def serve_chat():
     get_sid()
     return send_from_directory('.', 'chatbot.html')
+
+
+@app.route('/widget.js')
+def serve_widget():
+    return send_from_directory('.', 'widget.js', mimetype='application/javascript')
 
 
 @app.route('/api/welcome', methods=['GET'])

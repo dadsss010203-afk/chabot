@@ -390,7 +390,7 @@
         .typing .bubble {
             display: flex;
             align-items: center;
-            gap: 4px;
+            gap: 6px;
             padding: 12px 14px;
             background: var(--blanco);
             border: 1px solid var(--gris-bordes);
@@ -741,7 +741,6 @@
 
     <div id="form-area">
         <form id="form">
-            <button type="button" id="btn-mapa" onclick="abrirMapa()" title="Ver sucursales en mapa">📍</button>
             <input type="text" id="input" placeholder="Escribe tu consulta aquí..." autocomplete="off" />
             <button type="button" id="stop" onclick="detenerRespuesta()" title="Detener respuesta">⏹</button>
             <button type="submit" id="send">➤</button>
@@ -757,20 +756,6 @@
     </div>
 </div>
 
-<!-- MODAL MAPA -->
-<div id="mapa-modal">
-    <div id="mapa-contenedor">
-        <div id="mapa-header">
-            <div>
-                <h3>📍 Sucursales Correos Bolivia</h3>
-                <span>Haz clic en una sucursal para ver detalles</span>
-            </div>
-            <button id="cerrar-mapa" onclick="cerrarMapa()">✕</button>
-        </div>
-        <div id="mapa"></div>
-        <div id="sucursales-lista"></div>
-    </div>
-</div>
 
 <script>
     let chatAbierto        = false;
@@ -784,26 +769,31 @@
         es: {
             placeholder : "Escribe tu consulta aquí...",
             finalizado  : "Conversación finalizada",
+            analizando  : "Analizando tu consulta...",
             sugerencias : ["¿Cómo realizar un envío?", "¿Cuáles son las tarifas actuales?", "¿Qué es el servicio EMS?", "Sucursal de La Paz"],
         },
         en: {
             placeholder : "Type your question here...",
             finalizado  : "Conversation ended",
+            analizando  : "Analyzing your request...",
             sugerencias : ["How to send a package?", "What are the current rates?", "What is EMS service?", "La Paz branch"],
         },
         fr: {
             placeholder : "Écrivez votre question ici...",
             finalizado  : "Conversation terminée",
+            analizando  : "Analyse en cours...",
             sugerencias : ["Comment envoyer un colis?", "Quels sont les tarifs?", "Qu'est-ce que le service EMS?", "Succursale de La Paz"],
         },
         pt: {
             placeholder : "Digite sua consulta aqui...",
             finalizado  : "Conversa encerrada",
+            analizando  : "Analisando sua consulta...",
             sugerencias : ["Como enviar um pacote?", "Quais são as tarifas?", "O que é o serviço EMS?", "Agência de La Paz"],
         },
         zh: {
             placeholder : "在此输入您的问题...",
             finalizado  : "对话已结束",
+            analizando  : "正在分析您的请求...",
             sugerencias : ["如何寄包裹？", "当前费率是多少？", "什么是EMS服务？", "拉巴斯分部"],
         },
     };
@@ -968,7 +958,9 @@
 
         const bubble = document.createElement('div');
         bubble.className = 'bubble';
-        bubble.innerHTML = '<div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>';
+        
+        const ui = UI_TEXTOS[idiomaActual] || UI_TEXTOS.es;
+        bubble.innerHTML = `<span style="color: #666;">${ui.analizando}</span> <div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>`;
 
         wrap.appendChild(avatar);
         wrap.appendChild(bubble);
