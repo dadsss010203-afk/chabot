@@ -1,0 +1,2816 @@
+[
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/services"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/services"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/services"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/services"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/services"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/services"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/sp"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/sp"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/sp"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/sp"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/sp"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/sp"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/servicio-encomienda-postal"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/servicio-encomienda-postal"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/servicio-encomienda-postal"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/servicio-encomienda-postal"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/servicio-encomienda-postal"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/servicio-encomienda-postal"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/me"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/me"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/me"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/me"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/me"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/me"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/eca"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/eca"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/eca"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/eca"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/eca"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/eca"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/ems"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/ems"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/ems"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/ems"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/ems"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/ems"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/realiza-envios-diarios-a"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/realiza-envios-diarios-a"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/realiza-envios-diarios-a"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/realiza-envios-diarios-a"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/realiza-envios-diarios-a"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/realiza-envios-diarios-a"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/institucional"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/institucional"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/institucional"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/institucional"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/institucional"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/institucional"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/contact-us"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/contact-us"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/contact-us"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/contact-us"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/contact-us"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/contact-us"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/noticias"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/noticias"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/noticias"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/noticias"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/noticias"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/noticias"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/about"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/about"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/about"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/about"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/about"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/about"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/filatelia"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/filatelia"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/filatelia"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/filatelia"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/filatelia"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/filatelia"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/chasquiexpressbo"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/chasquiexpressbo"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/chasquiexpressbo"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/chasquiexpressbo"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/chasquiexpressbo"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/chasquiexpressbo"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/reglamentos"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/reglamentos"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/reglamentos"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/reglamentos"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/reglamentos"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/reglamentos"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/contrataciones"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/contrataciones"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/contrataciones"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/contrataciones"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/contrataciones"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/contrataciones"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/preguntas-frecuentes"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/preguntas-frecuentes"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/preguntas-frecuentes"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/preguntas-frecuentes"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/preguntas-frecuentes"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/preguntas-frecuentes"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/recursos"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/recursos"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/recursos"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/recursos"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/recursos"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/recursos"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/sitemap"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/sitemap"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/sitemap"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/sitemap"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/sitemap"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/sitemap"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/evita-estafas"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/evita-estafas"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/evita-estafas"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/evita-estafas"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/evita-estafas"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/evita-estafas"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/casillas"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/casillas"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/casillas"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/casillas"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/casillas"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/casillas"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/al-abrir-las-puertas-del-estado-encontramos-algo-mas-que-desorden"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/al-abrir-las-puertas-del-estado-encontramos-algo-mas-que-desorden"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/al-abrir-las-puertas-del-estado-encontramos-algo-mas-que-desorden"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/al-abrir-las-puertas-del-estado-encontramos-algo-mas-que-desorden"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/al-abrir-las-puertas-del-estado-encontramos-algo-mas-que-desorden"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/al-abrir-las-puertas-del-estado-encontramos-algo-mas-que-desorden"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/author/dmin"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/author/dmin"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/author/dmin"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/author/dmin"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/author/dmin"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/author/dmin"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/category/sin-categoria"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/category/sin-categoria"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/category/sin-categoria"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/category/sin-categoria"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/category/sin-categoria"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/category/sin-categoria"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/la-agencia-boliviana-de-correos-rinde-homenaje-a-bolivia-con-la-emision-de-los-sellos-postales-del-bicentenario"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/la-agencia-boliviana-de-correos-rinde-homenaje-a-bolivia-con-la-emision-de-los-sellos-postales-del-bicentenario"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/la-agencia-boliviana-de-correos-rinde-homenaje-a-bolivia-con-la-emision-de-los-sellos-postales-del-bicentenario"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/la-agencia-boliviana-de-correos-rinde-homenaje-a-bolivia-con-la-emision-de-los-sellos-postales-del-bicentenario"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/la-agencia-boliviana-de-correos-rinde-homenaje-a-bolivia-con-la-emision-de-los-sellos-postales-del-bicentenario"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/la-agencia-boliviana-de-correos-rinde-homenaje-a-bolivia-con-la-emision-de-los-sellos-postales-del-bicentenario"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/author/direccion_comercial"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/author/direccion_comercial"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/author/direccion_comercial"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/author/direccion_comercial"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/author/direccion_comercial"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/author/direccion_comercial"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/serie-animada-trascender-segunda-tierra-duplicado-6232"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/serie-animada-trascender-segunda-tierra-duplicado-6232"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/serie-animada-trascender-segunda-tierra-duplicado-6232"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/serie-animada-trascender-segunda-tierra-duplicado-6232"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/serie-animada-trascender-segunda-tierra-duplicado-6232"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/serie-animada-trascender-segunda-tierra-duplicado-6232"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/la-agencia-boliviana-de-correos-en-coordinacion-con-la-embajada-de-la-republica-dominicana-lanzan-y-ponen-en-circulacion-los-sellos-postales-homenaje-a-las-hermanas-mirabal-y"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/la-agencia-boliviana-de-correos-en-coordinacion-con-la-embajada-de-la-republica-dominicana-lanzan-y-ponen-en-circulacion-los-sellos-postales-homenaje-a-las-hermanas-mirabal-y"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/la-agencia-boliviana-de-correos-en-coordinacion-con-la-embajada-de-la-republica-dominicana-lanzan-y-ponen-en-circulacion-los-sellos-postales-homenaje-a-las-hermanas-mirabal-y"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/la-agencia-boliviana-de-correos-en-coordinacion-con-la-embajada-de-la-republica-dominicana-lanzan-y-ponen-en-circulacion-los-sellos-postales-homenaje-a-las-hermanas-mirabal-y"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/la-agencia-boliviana-de-correos-en-coordinacion-con-la-embajada-de-la-republica-dominicana-lanzan-y-ponen-en-circulacion-los-sellos-postales-homenaje-a-las-hermanas-mirabal-y"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/la-agencia-boliviana-de-correos-en-coordinacion-con-la-embajada-de-la-republica-dominicana-lanzan-y-ponen-en-circulacion-los-sellos-postales-homenaje-a-las-hermanas-mirabal-y"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/category/agencia-boliviana-de-correos"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/category/agencia-boliviana-de-correos"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/category/agencia-boliviana-de-correos"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/category/agencia-boliviana-de-correos"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/category/agencia-boliviana-de-correos"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/category/agencia-boliviana-de-correos"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/difusion-realizada-por-el-medio-televisivo-f10-sobre-estafas-a-nombre-de-la-agencia-boliviana-de-correos"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/difusion-realizada-por-el-medio-televisivo-f10-sobre-estafas-a-nombre-de-la-agencia-boliviana-de-correos"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/difusion-realizada-por-el-medio-televisivo-f10-sobre-estafas-a-nombre-de-la-agencia-boliviana-de-correos"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/difusion-realizada-por-el-medio-televisivo-f10-sobre-estafas-a-nombre-de-la-agencia-boliviana-de-correos"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/difusion-realizada-por-el-medio-televisivo-f10-sobre-estafas-a-nombre-de-la-agencia-boliviana-de-correos"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/difusion-realizada-por-el-medio-televisivo-f10-sobre-estafas-a-nombre-de-la-agencia-boliviana-de-correos"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/comunicado-estafa"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/comunicado-estafa"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/comunicado-estafa"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/comunicado-estafa"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/comunicado-estafa"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/comunicado-estafa"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/suscripcion-del-contrato-para-la-adecuacion-de-ambientes-y-equipamiento-del-centro-de-tratamiento-de-correspondencia"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/suscripcion-del-contrato-para-la-adecuacion-de-ambientes-y-equipamiento-del-centro-de-tratamiento-de-correspondencia"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/suscripcion-del-contrato-para-la-adecuacion-de-ambientes-y-equipamiento-del-centro-de-tratamiento-de-correspondencia"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/suscripcion-del-contrato-para-la-adecuacion-de-ambientes-y-equipamiento-del-centro-de-tratamiento-de-correspondencia"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/suscripcion-del-contrato-para-la-adecuacion-de-ambientes-y-equipamiento-del-centro-de-tratamiento-de-correspondencia"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/suscripcion-del-contrato-para-la-adecuacion-de-ambientes-y-equipamiento-del-centro-de-tratamiento-de-correspondencia"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/comunicado-16-05-2024"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/comunicado-16-05-2024"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/comunicado-16-05-2024"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/comunicado-16-05-2024"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/comunicado-16-05-2024"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/comunicado-16-05-2024"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/comunicado"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/comunicado"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/comunicado"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/comunicado"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/comunicado"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/comunicado"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/feliz-dia-del-nino-2024"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/feliz-dia-del-nino-2024"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/feliz-dia-del-nino-2024"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/feliz-dia-del-nino-2024"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/feliz-dia-del-nino-2024"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/feliz-dia-del-nino-2024"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/serie-animada-trascender-segunda-tierra"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/serie-animada-trascender-segunda-tierra"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/serie-animada-trascender-segunda-tierra"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/serie-animada-trascender-segunda-tierra"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/serie-animada-trascender-segunda-tierra"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/serie-animada-trascender-segunda-tierra"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/invitacion-a-rendicion-publica-de-cuentas-inicial-2024"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/invitacion-a-rendicion-publica-de-cuentas-inicial-2024"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/invitacion-a-rendicion-publica-de-cuentas-inicial-2024"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/invitacion-a-rendicion-publica-de-cuentas-inicial-2024"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/invitacion-a-rendicion-publica-de-cuentas-inicial-2024"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/invitacion-a-rendicion-publica-de-cuentas-inicial-2024"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/feliz-dia-del-padre"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/feliz-dia-del-padre"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/feliz-dia-del-padre"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/feliz-dia-del-padre"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/feliz-dia-del-padre"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/feliz-dia-del-padre"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/invitacion-a-rendicion-publica-de-cuentas-final-2023"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/invitacion-a-rendicion-publica-de-cuentas-final-2023"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/invitacion-a-rendicion-publica-de-cuentas-final-2023"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/invitacion-a-rendicion-publica-de-cuentas-final-2023"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/invitacion-a-rendicion-publica-de-cuentas-final-2023"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/invitacion-a-rendicion-publica-de-cuentas-final-2023"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/alasitas-2024-junto-a-la-agbc"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/alasitas-2024-junto-a-la-agbc"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/alasitas-2024-junto-a-la-agbc"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/alasitas-2024-junto-a-la-agbc"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/alasitas-2024-junto-a-la-agbc"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/alasitas-2024-junto-a-la-agbc"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/lanzamiento-de-sello-postal-agbc-axs"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/lanzamiento-de-sello-postal-agbc-axs"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/lanzamiento-de-sello-postal-agbc-axs"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/lanzamiento-de-sello-postal-agbc-axs"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/lanzamiento-de-sello-postal-agbc-axs"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/lanzamiento-de-sello-postal-agbc-axs"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/felicidades-beni"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/felicidades-beni"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/felicidades-beni"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/felicidades-beni"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/felicidades-beni"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/felicidades-beni"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/felicidades-potosi"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/felicidades-potosi"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/felicidades-potosi"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/felicidades-potosi"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/felicidades-potosi"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/felicidades-potosi"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/arte-por-la-transparencia"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/arte-por-la-transparencia"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/arte-por-la-transparencia"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/arte-por-la-transparencia"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/arte-por-la-transparencia"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/arte-por-la-transparencia"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/verificacion-anticorrupcion"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/verificacion-anticorrupcion"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/verificacion-anticorrupcion"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/verificacion-anticorrupcion"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/verificacion-anticorrupcion"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/verificacion-anticorrupcion"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/llegada-de-paquetes-economicos"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/llegada-de-paquetes-economicos"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/llegada-de-paquetes-economicos"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/llegada-de-paquetes-economicos"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/llegada-de-paquetes-economicos"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/llegada-de-paquetes-economicos"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/mercaderia-prohibida-para-enviar"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/mercaderia-prohibida-para-enviar"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/mercaderia-prohibida-para-enviar"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/mercaderia-prohibida-para-enviar"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/mercaderia-prohibida-para-enviar"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/mercaderia-prohibida-para-enviar"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/cuales-son-los-requisitos-para-realizar-un-envio"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/cuales-son-los-requisitos-para-realizar-un-envio"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/cuales-son-los-requisitos-para-realizar-un-envio"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/cuales-son-los-requisitos-para-realizar-un-envio"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/cuales-son-los-requisitos-para-realizar-un-envio"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/cuales-son-los-requisitos-para-realizar-un-envio"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/sabes-como-rotular-un-sobre"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/sabes-como-rotular-un-sobre"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/sabes-como-rotular-un-sobre"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/sabes-como-rotular-un-sobre"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/sabes-como-rotular-un-sobre"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/sabes-como-rotular-un-sobre"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/puedes-realizar-envios-desde"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/puedes-realizar-envios-desde"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/puedes-realizar-envios-desde"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/puedes-realizar-envios-desde"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/puedes-realizar-envios-desde"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/puedes-realizar-envios-desde"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/recursos-humanos"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/recursos-humanos"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/recursos-humanos"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/recursos-humanos"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/recursos-humanos"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/recursos-humanos"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/auditoria-interna"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/auditoria-interna"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/auditoria-interna"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/auditoria-interna"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/auditoria-interna"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/auditoria-interna"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/auditoriapoa"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/auditoriapoa"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/auditoriapoa"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/auditoriapoa"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/auditoriapoa"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/auditoriapoa"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/construccion"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/construccion"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/construccion"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/construccion"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/construccion"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/construccion"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/ejecucion-presupuestaria-de-recursos-y-gastos"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/ejecucion-presupuestaria-de-recursos-y-gastos"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/ejecucion-presupuestaria-de-recursos-y-gastos"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/ejecucion-presupuestaria-de-recursos-y-gastos"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/ejecucion-presupuestaria-de-recursos-y-gastos"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/ejecucion-presupuestaria-de-recursos-y-gastos"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/formularios"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/formularios"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/formularios"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/formularios"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/formularios"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/formularios"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/informacion-financiera"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/informacion-financiera"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/informacion-financiera"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/informacion-financiera"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/informacion-financiera"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/informacion-financiera"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/leyes-y-decretos"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/leyes-y-decretos"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/leyes-y-decretos"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/leyes-y-decretos"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/leyes-y-decretos"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/leyes-y-decretos"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/leyes-y-decretos-trasparencia"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/leyes-y-decretos-trasparencia"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/leyes-y-decretos-trasparencia"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/leyes-y-decretos-trasparencia"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/leyes-y-decretos-trasparencia"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/leyes-y-decretos-trasparencia"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/planesinstitucionales"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/planesinstitucionales"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/planesinstitucionales"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/planesinstitucionales"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/planesinstitucionales"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/planesinstitucionales"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/poa"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/poa"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/poa"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/poa"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/poa"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/poa"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/prueba"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/prueba"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/prueba"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/prueba"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/prueba"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/prueba"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/rendicioncuentas"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/rendicioncuentas"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/rendicioncuentas"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/rendicioncuentas"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/rendicioncuentas"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/rendicioncuentas"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/resolucion-ministerial"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/resolucion-ministerial"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/resolucion-ministerial"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/resolucion-ministerial"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/resolucion-ministerial"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/resolucion-ministerial"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/resoluciones"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/resoluciones"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/resoluciones"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/resoluciones"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/resoluciones"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/resoluciones"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/category/sin-categoria/page/2"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/category/sin-categoria/page/2"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/category/sin-categoria/page/2"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/category/sin-categoria/page/2"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/category/sin-categoria/page/2"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/category/sin-categoria/page/2"
+  },
+  {
+    "nombre": "SIRECO (Sistema de Reclamos y Sugerencias)",
+    "url": "https://sireco.correos.gob.bo:8102/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/category/agencia-boliviana-de-correos/page/2"
+  },
+  {
+    "nombre": "UNIENVIO (Sistema de ECA)",
+    "url": "https://unienvio.correos.gob.bo:8103/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/category/agencia-boliviana-de-correos/page/2"
+  },
+  {
+    "nombre": "GESDO (Sistema de Carteros)",
+    "url": "https://gesdo.correos.gob.bo:8106/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/category/agencia-boliviana-de-correos/page/2"
+  },
+  {
+    "nombre": "SIREN (Sistema de Encomiendas)",
+    "url": "https://siren.correos.gob.bo:8107/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/category/agencia-boliviana-de-correos/page/2"
+  },
+  {
+    "nombre": "ULTRAPOST (Sistema de EMS)",
+    "url": "https://ultrapost.correos.gob.bo:8108/login",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/category/agencia-boliviana-de-correos/page/2"
+  },
+  {
+    "nombre": "GESCON(Sistema de contratos)",
+    "url": "http://gescon.correos.gob.bo:3005/",
+    "descripcion": "",
+    "tipo": "aplicacion",
+    "fuente": "https://correos.gob.bo/category/agencia-boliviana-de-correos/page/2"
+  }
+]
