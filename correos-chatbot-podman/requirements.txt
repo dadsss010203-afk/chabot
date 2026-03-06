@@ -1,0 +1,5 @@
+flask
+chromadb
+sentence-transformers
+ollama
+tqdm
