@@ -26,7 +26,7 @@ CORS(app)
 #  CONFIGURACIÓN
 # ─────────────────────────────────────────────
 EMBEDDING_MODEL     = os.environ.get("EMBEDDING_MODEL", "paraphrase-multilingual-MiniLM-L12-v2")
-LLM_MODEL           = os.environ.get("LLM_MODEL", "correos-bot")
+LLM_MODEL           = os.environ.get("LLM_MODEL", "llama3.2:3b")
 DATA_FILE           = os.environ.get("DATA_FILE",       "data/correos_bolivia.txt")
 SUCURSALES_FILE     = os.environ.get("SUCURSALES_FILE", "data/sucursales_contacto.json")
 CHROMA_PATH         = os.environ.get("CHROMA_PATH",     "chroma_db")
